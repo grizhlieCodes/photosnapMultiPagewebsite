@@ -1,0 +1,303 @@
+
+
+
+
+
+
+
+
+
+//--------------Color Variables--------------
+
+$--main-accent-color: linear-gradient(to top right, rgb(255, 197, 147),rgb(188, 113, 152),rgb(90, 119, 255));
+$--pure-black-color: #000;
+$--pure-white-color: #fff;
+$--light-grey-color: #DFDFDF;
+//END OF: Color Variables ---
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+//END OF: Imports ---
+
+//----------RESETS-----
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: none;
+}
+
+a {
+    color: $--pure-black-color;
+    text-decoration: none;
+}
+
+
+//END OF: Resets----------
+
+
+
+//----------Styling of main components----------
+
+main {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+}
+
+
+:root {
+    font-size: 62.50%;
+}
+
+:root, body, * {
+    box-sizing: border-box;
+}
+
+    //Font/Text
+
+    :root, body, * {
+        font-family: 'DM Sans', sans-serif;
+    }
+
+    body {
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: clamp(3.2rem, 3vw, 4rem);
+        line-height: 48px;
+        letter-spacing: 3.33px;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 25px;
+    }
+
+    h3 {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    h4 {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 2px;
+    }
+
+    //Buttons
+
+
+    //style all buttons
+    .button,
+    .arrow-button,
+    button
+     {
+        height: 40px;
+        font-size: 12px;
+        line-height: 15.62px;
+        letter-spacing: 2px;
+        font-weight: 700;
+        text-align: left;
+        cursor: pointer;
+
+    }
+
+    //color the buttons
+    .white-on-black {
+        background: $--pure-black-color;
+        color: $--pure-white-color;
+    }
+
+    .black-on-white {
+        background: $--pure-white-color;
+        color: $--pure-black-color;
+    }
+
+    .white-on-black.pricing-page:hover,
+    .black-on-white.pricing-page:hover {
+        background: $--light-grey-color !important;
+        color: $--pure-black-color !important;
+    }
+
+    .button:hover,
+    .button:active
+     {
+        background: $--light-grey-color;
+        color: $--pure-black-color;
+    }
+
+    .arrow-button:hover {
+        text-decoration: underline;
+    }
+
+    .bg-white {
+        background: $--pure-white-color;
+    }
+
+    .col-white {
+        color: $--pure-white-color;
+    }
+
+    .col-black {
+        color: $--pure-black-color;
+    }
+
+    .bg-black {
+        background: $--pure-black-color;
+    }
+
+    .col-grey {
+        // color: $--light-grey-color;
+        color: #999999;
+    }
+
+    .bg-grey {
+        background: $--light-grey-color;
+    }
+
+    @media screen and (min-width: 768px) {
+        .f-rr-nwr {
+            flex-flow: row-reverse nowrap !important;
+        }
+
+        // h1 {
+        //     font-size: clamp(3.2rem, 3vw, 4rem);
+        // }
+    
+        h2 {
+            font-size: 25px;
+        }
+    
+        h3 {
+            font-size: 25px;
+        }
+    
+        h4 {
+            font-size: 16px;
+        }
+    }
+
+    //burger menu helper class to enable a black opacity bk covering main
+    .black-background {
+        display: none;
+        position: absolute;
+        background: black;
+        top: 72px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: opacity 150ms ease-in-out;
+        z-index: 90;
+    }
+
+    .opacityOn {
+        display: block;
+        opacity: 0.65;
+    }
+
+
+//SVG Styling
+    svg.white {
+        fill: $--pure-white-color !important;
+        stroke: $--pure-white-color !important;
+    }
+    
+    svg.black {
+        fill: $--pure-black-color !important;;
+        stroke: $--pure-black-color !important;;
+    }
+
+
+    //stories styling
+
+    .story-author,
+    .story-date,
+    .date,
+    .author {
+        font-size: 1.3rem;
+    }
+
+    .date {
+        opacity: 0.7;
+    }
+
+    // .story-name {
+
+    // }
+
+    .story-divider{
+        background: rgba(151, 151, 151, 0.25);
+        width: 100%;
+        height: 1px;
+        margin: 1.6rem 0 2rem 0;
+    }
+
+    // .story-date {
+
+    // }
+
+//positioning for SVG for arrow button
+    .arrow-button {
+        position: relative;
+
+        svg {
+            position: absolute;
+            top: 50%;
+            // right: 0;
+            transform: translateY(-50%);
+            margin-left: 2rem;
+        }
+    }

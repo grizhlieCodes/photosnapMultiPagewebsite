@@ -1,0 +1,237 @@
+footer {
+
+    width: 100%;
+    min-height: 539px;
+    background: $--pure-black-color;
+    display: flex !important;
+
+    @media screen and (min-width: 768px){
+        width: 100%;
+        min-height: 284px;
+    }
+
+    @media screen and (min-width: 1365px) {
+        width: 100%;
+        min-height: 250px;
+    }
+
+    .footer-grid-container {
+        margin: auto;
+        width: 310px;
+        height: 427px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(26, 16.5px);
+        place-items: center;
+
+        @media screen and (min-width: 768px){
+            min-width: 688px;
+            width: 76.4%;
+            height: 156px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(5, 1fr);
+            place-items: start;
+
+            .left-column {
+                grid-column: 1/2;
+            }
+
+            .right-column {
+                grid-column: 2/3;
+            }
+    
+            .logo-svg-container {
+                margin: 0;
+                grid-row: 1/2;
+            }
+        }
+
+        @media screen and (min-width: 1365px) {
+            min-width: 688px;
+            width: 76.4%;
+            max-width: 1104px;
+            height: 122px;
+            grid-template-columns: 280px 140px 1fr;
+            grid-template-rows: repeat(5, 1fr);
+            place-items: start;
+
+            .left-column {
+                grid-column: 1/2;
+            }
+
+            .left-column.mid-column {
+                grid-column: 2/3;
+            }
+
+            .right-column {
+                grid-column: 3/4;
+            }
+        }
+
+        .logo-svg-container {
+            grid-row: 1/2;
+
+            @media screen and (min-width: 1365px) {
+                margin: 0;
+            }
+        }
+
+        .social-media-container {
+            width: 154px;
+            grid-row: 3/6;
+            height: 20px;
+            display: flex;
+            justify-content: space-around;
+
+            @media screen and (min-width: 768px){
+                width: 154px;
+                grid-row: 5/6;
+                height: 20px;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            @media screen and (min-width: 1365px) {
+                width: 154px;
+                grid-row: 5/6;
+                height: 20px;
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+
+        .nav-links-container {
+            grid-row: 8/16;
+            width: 100%;
+            margin: auto;
+            margin-top: -15px;
+            height: 100%;
+            max-height: 121px;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            @media screen and (min-width: 768px){
+                grid-row: 2/4;
+                width: 100%;
+                margin: auto;
+                height: auto;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                align-items: flex-end;
+                justify-self: end;
+                padding-bottom: 10px;
+            }
+
+            @media screen and (min-width: 1365px) {
+                grid-row: 1/6;
+                width: 100%;
+                margin: auto;
+                height: 100%;
+                max-height: 122px;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-around;
+                align-items: flex-start;
+                place-self: center;
+                padding-bottom: 0;
+            }
+
+            a {
+                color: $--pure-white-color;
+                font-size: 12px;
+                letter-spacing: 2px;
+
+                @media screen and (min-width: 768px){
+                    color: $--pure-white-color;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+
+                    &:not(:nth-last-child(1)){
+                        margin-right: 2.6rem;
+                    }
+                }
+
+                @media screen and (min-width: 1365px) {
+                    color: $--pure-white-color;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    line-height: 12px;
+
+                    
+                    &:not(:nth-last-child(1)){
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            a:hover {
+                opacity: 0.3;
+            }
+
+        }
+
+        button {
+            grid-row: 21/23;
+            width: 172px;
+            position: relative;
+            text-align: left;
+
+            @media screen and (min-width: 768px){
+                grid-row: 1/2;
+                width: 172px;
+                position: relative;
+                text-align: left;
+                place-self: start end;
+                height: auto;
+            }
+
+            @media screen and (min-width: 1365px) {
+                grid-row: 1/2;
+                width: 172px;
+                position: relative;
+                text-align: left;
+                place-self: start end;
+                height: auto;
+            }
+
+            svg {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                margin-left: 23px;
+            }
+        }
+
+        p {
+            grid-row: 25/27;
+            color: $--pure-white-color;
+            opacity: 0.5;
+
+            @media screen and (min-width: 768px){
+                grid-row: 5/6;
+                color: $--pure-white-color;
+                opacity: 0.5;
+                justify-self: end;
+            }
+
+            @media screen and (min-width: 1365px) {
+                grid-row: 5/6;
+                color: $--pure-white-color;
+                opacity: 0.5;
+                justify-self: end;
+            }
+        }
+
+    }
+    
+    .svg-container:not(:hover) .footer-link-svg{
+    fill:white;
+    }
+
+    .svg-container:hover {
+        cursor: pointer;
+    }
+}
